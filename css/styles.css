@@ -1,0 +1,26 @@
+/* Import Bootstrap CSS */
+@import url('css/bootstrap.min.css');
+
+/* Import Font Awesome Icons */
+@import url('css/font-awesome.min.css');
+
+/* Import Flaticon */
+@import url('css/flaticon.css');
+
+/* Import Swiper Carousel */
+@import url('css/swiper.min.css');
+
+/* Import Animate CSS */
+@import url('css/animate.css');
+
+/* Import Magnific Popup */
+@import url('css/magnific-popup.css');
+
+/* Import Animation Headline */
+@import url('css/animation-headline.css');
+
+/* Import Slick Navigation */
+@import url('css/slicknav.css');
+
+/* Import Custom CSS */
+@import url('css/custom.css');
