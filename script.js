@@ -1,41 +1,33 @@
-const form = document.getElementById("contactForm");
-const emailField = document.getElementById("emailField");
-const messageField = document.getElementById("message");
+const contactForm = document.getElementById("contactForm");
+const spamWords = ["free money", "buy now", "click here", "subscribe", "promo"]; // [cite: 74]
+let submitTimes = []; 
 
-form.addEventListener("submit", function (e) {
-    if (!emailField.value.includes("@")) {
-        alert("Enter a valid email");
+contactForm.addEventListener("submit", function (e) {
+    const message = contactForm.querySelector("textarea").value.toLowerCase();
+    const email = contactForm.querySelector('input[type="email"]').value;
+    const now = Date.now();
+
+
+    if (!email.includes("@")) {
+        alert("Please enter a valid email address.");
         e.preventDefault();
         return;
     }
 
-    if (isRateLimited()) {
-        alert("Too many submissions. Please wait a minute.");
-        e.preventDefault();
-        return;
-    }
-
-    if (containsSpam(messageField.value)) {
+ 
+    const hasSpam = spamWords.some(word => message.includes(word));
+    if (hasSpam) {
         alert("Your message contains blocked spam keywords.");
         e.preventDefault();
         return;
     }
-});
 
-let submitTimes = []; 
-function isRateLimited() {
-    const now = Date.now();
-    submitTimes = submitTimes.filter(time => now - time < 60000); // Filter last 60s
+   
+    submitTimes = submitTimes.filter(time => now - time < 60000); // [cite: 39]
     if (submitTimes.length >= 3) {
-        return true;
+        alert("Too many submissions. Please wait a minute.");
+        e.preventDefault();
+        return;
     }
     submitTimes.push(now);
-    return false;
-}
-
-
-const spamWords = ["free money", "buy now", "click here", "subscribe", "promo"];
-function containsSpam(message) {
-    const lowerMessage = message.toLowerCase();
-    return spamWords.some(word => lowerMessage.includes(word));
-}
+});
