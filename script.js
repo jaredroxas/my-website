@@ -124,19 +124,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (isTooFast()) {
             e.preventDefault();
-            setFeedback("Submission was too fast. Please take a moment and try again.", "#e74c3c");
+            e.stopPropagation();
+            alert("Submission was too fast. Please take a moment and try again.");
             return;
         }
 
         if (isRateLimited()) {
             e.preventDefault();
-            setFeedback("Too many submissions. Please wait a minute before trying again.", "#e74c3c");
+            e.stopPropagation();
+            alert("Too many submissions. Please wait a minute before trying again.");
             return;
         }
 
         if (containsSpam(message)) {
             e.preventDefault();
-            setFeedback("Your message contains blocked spam keywords. Please revise your message.", "#e74c3c");
+            e.stopPropagation();
+            alert("Your message contains blocked spam keywords. Please revise your message.");
             highlightField("messageField", false);
             return;
         }
