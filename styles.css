@@ -1,37 +1,28 @@
-/* Import Bootstrap CSS */
 @import url('css/bootstrap.min.css');
 
-/* Import Font Awesome Icons */
 @import url('css/font-awesome.min.css');
 
-/* Import Flaticon */
 @import url('css/flaticon.css');
 
-/* Import Swiper Carousel */
 @import url('css/swiper.min.css');
 
-/* Import Animate CSS */
 @import url('css/animate.css');
 
-/* Import Magnific Popup */
 @import url('css/magnific-popup.css');
 
-/* Import Animation Headline */
 @import url('css/animation-headline.css');
 
-/* Import Slick Navigation */
 @import url('css/slicknav.css');
 
-/* Import Custom CSS */
 @import url('css/custom.css');
 
-/* Styling for the Lab 6 Digital Clock */
+
 #digitalClock {
-    position: fixed;    /* Keeps it visible throughout the page */
-    right: 20px;        /* Distance from the right edge */
-    bottom: 20px;       /* Distance from the bottom edge */
-    background-color: #333; /* Dark background for contrast */
-    color: #00ff00;     /* Neon green for a 'digital' look */
+    position: fixed;   
+    right: 20px;       
+    bottom: 20px;       
+    background-color: #333; 
+    color: #00ff00;    
     padding: 15px 25px;
     border-radius: 8px;
     border: 2px solid #444;
