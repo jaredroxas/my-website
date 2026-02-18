@@ -14,6 +14,47 @@
 	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash%7CRoboto:300,400,400i,500,500i,700,700i,900" rel="stylesheet">
 	<!-- External CSS -->
 	<link href="styles.css" rel="stylesheet" media="screen">
+	<style>
+		#clock-box {
+			display: inline-block;
+			background: rgba(0, 0, 0, 0.55);
+			border: 2px solid #fff;
+			border-radius: 10px;
+			padding: 10px 24px;
+			margin-top: 18px;
+		}
+		#clock-label {
+			color: #ccc;
+			font-size: 13px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			margin-bottom: 2px;
+		}
+		#live-clock {
+			font-size: 2.4rem;
+			font-weight: 700;
+			color: #fff;
+			letter-spacing: 4px;
+			font-family: monospace;
+		}
+		#animation-section {
+			background: #1a1a2e;
+			padding: 60px 0;
+		}
+		#animation-section .section-title h2 {
+			color: #fff;
+		}
+		#animation-section .section-title p {
+			color: #aaa;
+		}
+		#ball-canvas {
+			display: block;
+			margin: 0 auto;
+			border-radius: 12px;
+			border: 2px solid #444;
+			background: #0f0f23;
+		}
+	</style>
 </head>
 <body data-spy="scroll" data-target="#main-navbar" data-offset="75">
 	
@@ -72,6 +113,10 @@
 							</span>
 						</h2>
 						<p>Welcome to my portfolio! I'm a passionate computer engineering student from De La Salle University, dedicated to learning new technologies and building innovative software solutions.</p>
+					<div id="clock-box">
+						<div id="clock-label">Current Time</div>
+						<div id="live-clock">00:00:00</div>
+					</div>
 					</div>
 					<!-- Banner Content End -->
 				</div>
@@ -123,7 +168,7 @@
 							<li><i class="flaticon-flag"></i><b>Nationality:</b> Filipino</li>
 							<li><i class="flaticon-freelance"></i><b>Freelance:</b> Available</li>
 							<li><i class="flaticon-placeholder"></i><b>Address:</b> Manila, Philippines</li>
-							<li><i class="flaticon-email"></i><b>Email:</b> John_Jared_Roxas@dlsu.edu.ph</li>
+							<li><i class="flaticon-email"></i><b>Email:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aee4c1c6c0f1e4cfdccbcaf1fcc1d6cfddeecac2dddb80cbcadb80dec6">[email&#160;protected]</a></li>
 							<li><i class="flaticon-translation"></i><b>Spoken Languages:</b> English - Filipino</li>
 						</ul>
 					</div>
@@ -465,7 +510,7 @@
 							<p><strong>Date of Birth:</strong> November 4, 2004</p>
 							<p><strong>Nationality:</strong> Filipino</p>
 							<p><strong>Address:</strong> Taft Avenue, Malate, Manila, Philippines</p>
-							<p><strong>Email:</strong> John_Jared_Roxas@dlsu.edu.ph</p>
+							<p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ace6c3c4c2f3e6cddec9c8f3fec3d4cddfecc8c0dfd982c9c8d982dcc4">[email&#160;protected]</a></p>
 							<p><strong>Phone:</strong> +63 917 123 4567</p>
 							<p><strong>Languages:</strong> English, Filipino</p>
 						</div>
@@ -703,7 +748,7 @@
 					<!-- Contact info single start -->
 					<div class="contact-info-single wow fadeInUp" data-wow-delay="0.9s">
 						<h3>Email</h3>
-						<p>jared.roxas@dlsu.edu.ph <br />jared.roxas.work@gmail.com</p>
+						<p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cea4afbcabaae0bca1b6afbd8eaaa2bdbbe0abaabbe0bea6">[email&#160;protected]</a> <br /><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="214b405344450f534e5940520f564e534a61464c40484d0f424e4c">[email&#160;protected]</a></p>
 					</div>
 					<!-- Contact info single end -->
 				</div>
@@ -712,6 +757,26 @@
 	</div>
 	<!-- Contact Information Section Ends -->
 	
+	<!-- Animation Section Starts -->
+	<section id="animation-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title">
+						<h2>Animation</h2>
+						<p>Bouncing Ball - HTML5 Canvas & JavaScript</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<canvas id="ball-canvas" width="700" height="220"></canvas>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Animation Section Ends -->
+
 	<!-- Footer Section starts -->
 	<footer class="main-footer">
 		<div class="container">
@@ -751,27 +816,61 @@
 	<!-- Footer Section Ends -->
 	
 	<!-- Jquery Library File -->
-	<script src="js/jquery-1.12.4.min.js"></script>
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-1.12.4.min.js"></script>
 	<!-- Bootstrap js file -->
 	<script src="js/bootstrap.min.js"></script>
 	<!-- Wow js file -->
 	<script src="js/wow.js"></script>
 	<!-- Swiper Carousel js file -->
 	<script src="js/swiper.min.js"></script>
-	<!-- Counterup js file -->
-	<script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-	<!-- Isotop js file -->
-	<script src="js/isotope.min.js"></script>
-	<!-- Magnific Popup core JS file -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<!-- Slick Nav js file -->
-	<script src="js/jquery.slicknav.js"></script>
-	<!-- SmoothScroll -->
-	<script src="js/SmoothScroll.js"></script>
-	<!-- Animated Headline js file -->
-	<script src="js/animation-headline.js"></script>
-    <!-- Main Custom js file -->
-	<script src="js/function.js"></script>
+	<!-- Custom JS -->
+	<script src="js/app.js"></script>
+	<!-- Lab 6 Scripts -->
+	<script src="app.js"></script>
+	<script>
+		var canvas = document.getElementById("ball-canvas");
+		var ctx = canvas.getContext("2d");
+
+		var x = 40;
+		var y = canvas.height / 2;
+		var dx = 4;
+		var dy = -3;
+		var radius = 22;
+
+		var colors = ["#e74c3c", "#3498db", "#2ecc71", "#f39c12", "#9b59b6"];
+		var colorIndex = 0;
+		var ballColor = colors[colorIndex];
+
+		function drawBall() {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+			ctx.beginPath();
+			ctx.arc(x, y, radius, 0, Math.PI * 2);
+			ctx.fillStyle = ballColor;
+			ctx.shadowColor = ballColor;
+			ctx.shadowBlur = 20;
+			ctx.fill();
+			ctx.closePath();
+
+			var box = canvas.getBoundingClientRect();
+			ctx.fillStyle = "rgba(255,255,255,0.4)";
+			ctx.font = "12px monospace";
+			ctx.fillText("x: " + Math.round(x) + "  y: " + Math.round(y), 10, 20);
+
+			if (x + radius >= canvas.width || x - radius <= 0) {
+				dx = -dx;
+				colorIndex = (colorIndex + 1) % colors.length;
+				ballColor = colors[colorIndex];
+			}
+			if (y + radius >= canvas.height || y - radius <= 0) {
+				dy = -dy;
+			}
+
+			x += dx;
+			y += dy;
+		}
+
+		setInterval(drawBall, 16);
+	</script>
 </body>
 </html>
