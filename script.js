@@ -119,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!valid) {
             e.preventDefault();
             setFeedback("Please fix the errors above before submitting.", "#e74c3c");
+            alert("Form submission blocked: Please fix the highlighted errors.");
             return;
         }
 
@@ -144,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        alert("Validation complete. The website will remain frozen until you click OK to finish submission.");
         setFeedback("Sending your message...", "#27ae60");
     });
 });
