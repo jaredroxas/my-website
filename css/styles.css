@@ -24,3 +24,20 @@
 
 /* Import Custom CSS */
 @import url('css/custom.css');
+
+/* Styling for the Lab 6 Digital Clock */
+#digitalClock {
+    position: fixed;    /* Keeps it visible throughout the page */
+    right: 20px;        /* Distance from the right edge */
+    bottom: 20px;       /* Distance from the bottom edge */
+    background-color: #333; /* Dark background for contrast */
+    color: #00ff00;     /* Neon green for a 'digital' look */
+    padding: 15px 25px;
+    border-radius: 8px;
+    border: 2px solid #444;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1000;      /* Ensures it stays above other elements */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
